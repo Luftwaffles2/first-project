@@ -12,3 +12,10 @@ guess= ""
 while  guess != answer:""
 userInput=input (" + str(guess_range) + ")
 guess=int(userInput)
+
+if guess==answer:
+ print("You guessed it!")
+elif guess>answer:
+ print ("The number is lower")
+if guess<answer:
+ print ("The number is higher")
