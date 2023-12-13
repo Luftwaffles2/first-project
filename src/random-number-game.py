@@ -9,18 +9,9 @@ userInput = input("Guess a number between 1 and " + str(guess_range) + ": ")
 guess=int(userInput)
 
 guess= ""
-while  guess != answer:""
-userInput=input (" + str(guess_range) + ")
-guess=int(userInput)
-
-if guess==answer:
- print("You guessed it!")
-elif guess>answer:
- print ("The number is lower")
-elif guess<answer:
- print ("The number is higher")
-
- for answer in guess_range:
-  print (answer)
-  if answer==guess:
-   break
+while guess < answer:
+ print("The number is lower")
+ if guess>answer:
+  print("The number is higher")
+ if guess==answer:
+  print("You guessed it!")
