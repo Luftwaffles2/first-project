@@ -17,5 +17,10 @@ if guess==answer:
  print("You guessed it!")
 elif guess>answer:
  print ("The number is lower")
-if guess<answer:
+elif guess<answer:
  print ("The number is higher")
+
+ for answer in guess_range:
+  print (answer)
+  if answer==guess:
+   break
