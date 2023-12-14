@@ -1,5 +1,6 @@
 import random
 
+num_guesses=0
 guess_range = 99
 answer= random.randint(1, guess_range)
 
@@ -8,10 +9,17 @@ print; ""
 userInput = input("Guess a number between 1 and " + str(guess_range) + ": ")
 guess=int(userInput)
 
-guess= ""
-while guess < answer:
- print("The number is lower")
- if guess>answer:
-  print("The number is higher")
- if guess==answer:
-  print("You guessed it!")
+while(True): 
+    userInput = int(input("Please guess a number between 1 and 99:"))
+
+
+    if guess<answer:
+     print("The number is higher")
+
+
+    elif guess==answer:
+     print ("You guessed it!")
+    
+    
+    else :guess>answer
+    print ("The number is lower")
