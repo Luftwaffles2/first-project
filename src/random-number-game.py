@@ -1,6 +1,9 @@
 import random
 
-num_guesses=0
+high=0
+low=0
+win=0
+num_guesses=high+low+win
 guess_range = 99
 answer= random.randint(1, guess_range)
 userInput=input
@@ -11,17 +14,20 @@ guess=userInput
 while(True): 
     userInput = int(input("Please guess a number between 1 and 99:"))
 
-    if userInput > answer:
+    if userInput>answer:
         print ("Too high, try again.")
-        num_guesses + 1
+        high += 1
 
     elif userInput == answer:
         print ("You got it correct! Congratulations!")
-        num_guesses + 1
+        win += 1
         break 
-    print (num_guesses)
    
     if userInput<answer:
         print ("Too low, try again.")
-    num_guesses + 1
-        
+    low += 1
+
+print()
+print("Number of times too high: ", high)
+print("Number of times too low: ", low)
+print("Total number of guesses: ", (high + low + win))
