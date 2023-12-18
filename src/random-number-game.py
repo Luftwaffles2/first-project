@@ -23,11 +23,11 @@ while(True):
         win += 1
         break 
    
-    if userInput<answer:
+    elif userInput<answer:
         print ("Too low, try again.")
-    low += 1
+        low += 1
 
 print()
-print("Number of times too high: ", high)
-print("Number of times too low: ", low)
-print("Total number of guesses: ", (high + low + win))
+print("Number of times too high:", high)
+print("Number of times too low:", low)
+print("Total number of guesses:", (num_guesses))
